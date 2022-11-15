@@ -4,13 +4,14 @@ ENV LC_ALL C.UTF-8
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-   apt-utils \
-   locales \
-   python3-setuptools \
-   python3-pip \
-   python3-cryptography \
-   software-properties-common \
-   rsyslog systemd systemd-cron sudo iproute2 \
+  apt-utils \
+  locales \
+  python3-setuptools \
+  rsync \
+  python3-pip \
+  python3-cryptography \
+  software-properties-common \
+  rsyslog systemd systemd-cron sudo iproute2 \
   && rm -Rf /var/lib/apt/lists/* \
   && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
   && apt-get clean
