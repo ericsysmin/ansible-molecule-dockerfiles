@@ -43,10 +43,20 @@ jobs:
           - debian-9
           - debian-10
           - debian-11
+          - debian-buster
+          - debian-stretch
           - ubuntu-16.04
           - ubuntu-18.04
           - ubuntu-20.04
           - ubuntu-22.04
+          - ubuntu-bionic
+          - ubuntu-focal
+          - ubuntu-xenial
+          - fedora-28
+          - fedora-29
+          - fedora-30
+          - fedora-31
+          - fedora-32
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
