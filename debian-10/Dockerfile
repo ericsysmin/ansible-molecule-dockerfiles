@@ -2,7 +2,7 @@ FROM debian:buster
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update \
+RUN apt-key update && apt-get update \
   && apt-get install -y --no-install-recommends sudo systemd systemd-sysv \
     build-essential wget libffi-dev libssl-dev \
     python3-pip python3-dev python3-setuptools python3-wheel \
