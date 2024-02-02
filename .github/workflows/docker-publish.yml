@@ -21,21 +21,19 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
+defaults:
+  run:
+    working-directory: ./ubuntu-22.04
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./ubuntu-22.04
     permissions:
       contents: read
       packages: write
       # This is used to complete the identity challenge
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
